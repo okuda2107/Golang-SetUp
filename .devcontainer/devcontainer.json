@@ -7,7 +7,17 @@
 		"context": "..",
 		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 		"dockerfile": "./Dockerfile"
-	}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	},
+	"mounts": [
+		"source=${localWorkspaceFolder}/.devcontainer/.go,target=/home/vscode/go,type=bind"
+	]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
